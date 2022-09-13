@@ -8,7 +8,7 @@ const QRCode = () => {
         alt="qrcode"
       />
       <h3 className="text-lg font-medium leading-6 text-gray-900 text-center mt-12">
-        Please scan the QR code to your check in.
+        Please scan the QR code to check in.
       </h3>
     </div>
   );
