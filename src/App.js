@@ -99,12 +99,16 @@ function App() {
           )
         }
       </div>
-      <button
-        className="absolute bottom-5 right-5 inline-flex items-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-        onClick={publishMessage}
-      >
-        SIMULATE CHECK IN (REMOVE ME LATER)
-      </button>
+      {
+        status !== STATES[0] && (
+          <button
+            className="absolute bottom-5 right-5 inline-flex items-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+            onClick={publishMessage}
+          >
+            SIMULATE CHECK IN (REMOVE ME LATER)
+          </button>
+        )
+      }
     </div>
   );
 }
