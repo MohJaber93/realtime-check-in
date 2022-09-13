@@ -19,8 +19,12 @@ function App() {
 
   useEffect(() => {
     // TODO: api call to get checkin enabled flag
-    // if enabled
-    setStatus(STATES[1]);
+    // if enabled, setStatus to STATES[1]
+
+    setTimeout(
+      () => setStatus(STATES[1]),
+      10000,
+    );
 
     // TODO: check order id from params
     // if already checked in, get seat number
@@ -69,7 +73,12 @@ function App() {
   };
 
   return (
-    <div className="flex border-2 rounded-3xl max-w-sm p-8 m-auto">
+    <div className="flex flex-col items-center border-2 rounded-3xl max-w-sm p-8 m-auto">
+      <img
+        className="inline-block h-24 w-24 rounded-full mb-10"
+        src="/logo.jpg"
+        alt=""
+      />
       <div className="flex flex-col m-auto">
         {
           status === STATES[0] && (
